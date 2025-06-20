@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 function App() {
   const [entities, setEntities] = useState("");
-  const [dorkTemplate, setDorkTemplate] = useState(`"%s" fraud OR AML OR sanctions`);
+  const [dorkTemplate, setDorkTemplate] = useState(`"%s" AND ("money laundering" OR "fraud" OR "shell company" OR "sanctions" OR "fake invoices" OR "embezzlement" OR "court case" OR "FBI investigation" OR "Panama Papers" OR "Paradise Papers" OR "Offshore Leaks" OR "Swiss Leaks" OR "corruption" OR "tax evasion" OR "illicit finance" OR "criminal charges" OR "investigation" OR "bribery" OR "forfeiture" OR "DOJ" OR "SEC filing" OR "OFAC" OR "Interpol" OR "criminal complaint" OR "indictment") AND (site:reuters.com OR site:nytimes.com OR site:justice.gov OR site:sec.gov OR site:opencorporates.com OR site:linkedin.com OR site:ft.com OR site:icij.org OR site:offshoreleaks.icij.org OR site:consilium.europa.eu OR site:home.treasury.gov OR site:oecd.org OR site:bbc.com OR site:theguardian.com OR site:occrp.org OR site:interpol.int OR site:law360.com OR site:bloomberg.com OR site:wsj.com OR site:forbes.com OR site:taxjustice.net OR site:transparency.org OR site:globalwitness.org)
+`);
   const [delay, setDelay] = useState(500);
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
